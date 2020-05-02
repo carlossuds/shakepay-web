@@ -2,82 +2,62 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
+  max-height: 80vh;
   flex-direction: column;
 
-  header {
-    align-self: flex-start;
+  strong {
+    font-weight: 700;
+  }
 
-    img {
-      height: 53px;
-    }
+  :first-child {
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+  }
+`;
+
+export const Aside = styled.div`
+  strong,
+  span {
+    font-size: 18px;
   }
 `;
 
 export const Content = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
-  width: 933px;
-  height: 312px;
-  margin-top: 1%;
+  justify-content: center;
+  width: 60%;
+  flex-direction: column;
 
-  header {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-  }
-  button {
-    width: 200px;
-    height: 46px;
-    border: 2px solid orange;
-    border-radius: 4px;
-    background: none;
-    color: orange;
-    font-weight: 500;
+  h1 {
+    font-weight: 700;
+    font-size: 40px;
   }
 `;
 
-export const SelectionDiv = styled.div`
+export const Transaction = styled.div`
   display: flex;
-  flex-direction: row;
-  width: 35%;
+  flex-direction: column;
+  border: 1px solid
+    ${props => (props.direction === 'credit' ? '#056644' : '#9f0101')};
+  background-color: ${props =>
+    props.direction === 'credit' ? '#056644' : '#9f0101'};
+  width: 30%;
+  height: 150px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  padding: 10px;
   justify-content: space-between;
-`;
-
-export const Option = styled.div`
-  display: flex;
+  align-items: center;
   align-self: center;
-  flex-direction: row;
-  width: 300px;
-  margin-right: 20px;
 
-  svg {
-    margin-right: 10px;
-    align-self: flex-end;
+  span {
+    color: #fff;
+    font-size: 16px;
   }
-
-  div {
-    display: flex;
-    align-self: center;
-    flex-direction: column;
-
-    span,
-    strong {
-      color: #999;
-    }
-
-    strong {
-      font-size: 25px;
-    }
+  strong {
+    color: #fff;
+    font-size: 20px;
   }
-
-  :hover {
-    border-bottom: 2px solid red;
-  }
-`;
-
-export const Form = styled.div`
-  background-color: #fff;
-  width: 100%;
-  height: 100%;
 `;

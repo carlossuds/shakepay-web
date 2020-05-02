@@ -2,6 +2,7 @@
 
 body {
   background-color: #f2f2f2;
+  background-image: url('https://img5.goodfon.com/original/1920x1080/2/97/bitcoin-btc-black-gold-coin-bitkoin.jpg');
 }
 
 span,
@@ -13,4 +14,5 @@ strong,
 p,
 button {
   font: 14px 'Roboto', sans-serif;
+  color: #999;
 }
